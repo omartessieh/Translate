@@ -1,0 +1,11 @@
+ion-tab-button {
+    --color-selected: var(--ion-color-primary);
+}
+
+.rtl .alert-wrapper {
+    direction: rtl;
+}
+
+.ltr .alert-wrapper {
+    direction: ltr;
+}

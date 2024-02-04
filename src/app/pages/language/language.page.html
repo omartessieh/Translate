@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-toolbar mode="ios">
+    <ion-title> تغير اللغة</ion-title>
+    <ion-buttons slot="start" *ngIf="selectedOption !== 'ar'">
+      <ion-button (click)="gopage('/tabs/tab1')" style="margin-top: 0;">
+        <ion-icon name="chevron-back-outline" dir="ltr"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-buttons slot="start" *ngIf="selectedOption === 'ar'">
+      <ion-button (click)="gopage('/tabs/tab1')" style="margin-top: 0;">
+        <ion-icon name="chevron-back-outline" dir="rtl"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-list>
+    <ion-radio-group [(ngModel)]="selectedOption" (ionChange)="toggleLanguage($event)">
+      <ion-item>
+        <ion-label>Arabic</ion-label>
+        <ion-radio value="ar"></ion-radio>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>English</ion-label>
+        <ion-radio value="en"></ion-radio>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>French</ion-label>
+        <ion-radio value="fr"></ion-radio>
+      </ion-item>
+    </ion-radio-group>
+  </ion-list>
+</ion-content>
